@@ -15,6 +15,18 @@
 -->
 
 <resources>
+    
+    <!-- Custom Colors -->
+    <color name="dialer_theme_color">#1976D2</color>
+    <color name="dialer_theme_color_dark">#1565C0</color>
+    <color name="background_dialpad">#ffffffff</color>
+    <color name="background_dialpad_pressed">#ff1788e4</color>
+    <color name="dialpad_primary_text_color">#ff262626</color>
+    <color name="dialpad_secondary_text_color">#ff212121</color>
+    <color name="dialpad_digits_text_color">#ff1e1e1e</color>
+   
+    <color name="dialpad_icon_tint">#ff242424</color>
+    
     <!--  Primary text color in the Dialer -->
     <color name="dialtacts_primary_text_color">#333333</color>
     <!-- Secondary text color in the Dialer -->
