@@ -1260,11 +1260,6 @@ public class CallCardPresenter extends Presenter<CallCardPresenter.CallCardUi> i
     }
 
     @Override
-    public void onAnswerViewGrab(boolean isGrabbed) {
-        // No-op - required for RcsCallPresenter.
-    }
-
-    @Override
     public void onIncomingVideoAvailabilityChanged(boolean isAvailable) {
         Log.d(this, "onIncomingVideoAvailabilityChanged: available = " + isAvailable);
         if (mPrimary == null) {
