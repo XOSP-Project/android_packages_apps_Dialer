@@ -97,6 +97,12 @@
 
         </FrameLayout>
 
+        <fragment android:name="com.android.incallui.RcsCallFragment"
+            android:id="@+id/enrichcall_container"
+            android:layout_gravity="top|center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
         <fragment android:name="com.android.incallui.VideoCallFragment"
             android:layout_alignParentStart="true"
             android:layout_gravity="start|center_vertical"
@@ -106,6 +112,7 @@
     </FrameLayout>
 
     <LinearLayout
+        android:id="@+id/manage_conference_call"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -116,15 +123,17 @@
             android:layout_height="wrap_content"
             android:elevation="5dp"
             android:layout_alignParentBottom="true"/>
-
-        <!-- Volume boost and Volume enhancements in-call UI -->
-        <ImageButton android:id="@+id/volumeBoost"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:visibility="gone"
-            android:soundEffectsEnabled="false"
-            android:background="@drawable/vb_normal"/>
     </LinearLayout>
+
+    <!-- Volume boost and Volume enhancements in-call UI -->
+    <ImageButton android:id="@+id/volumeBoost"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_toEndOf="@id/primary_call_info_container"
+        android:layout_below="@id/manage_conference_call"
+        android:visibility="gone"
+        android:soundEffectsEnabled="false"
+        android:background="@drawable/vb_normal"/>
 
     <!-- Secondary "Call info" block, for the background ("on hold") call. -->
     <include layout="@layout/secondary_call_info"
