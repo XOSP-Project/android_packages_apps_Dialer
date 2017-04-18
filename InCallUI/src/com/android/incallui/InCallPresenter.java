@@ -2145,7 +2145,6 @@ public class InCallPresenter implements CallList.Listener,
         public void onSecondaryCallerInfoVisibilityChanged(boolean isVisible, int height);
         public void updatePrimaryCallState();
         public void onIncomingVideoAvailabilityChanged(boolean isAvailable);
-        public void onSendStaticImageStateChanged(boolean isEnabled);
         public void onAnswerViewGrab(boolean isGrabbed);
     }
 

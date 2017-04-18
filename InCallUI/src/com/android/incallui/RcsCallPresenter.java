@@ -582,10 +582,6 @@ public class RcsCallPresenter extends Presenter<RcsCallPresenter.RcsCallUi>
     }
 
     @Override
-    public void onSendStaticImageStateChanged(boolean isEnabled) {
-    }
-
-    @Override
     public void onAnswerViewGrab(boolean isGrabbed) {
         Log.d(this, "onAnswerViewGrab : " + isGrabbed);
         if(isGrabbed) {
