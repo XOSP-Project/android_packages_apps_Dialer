@@ -37,7 +37,6 @@ import static com.android.incallui.CallButtonFragment.Buttons.BUTTON_RXTX_VIDEO_
 import static com.android.incallui.CallButtonFragment.Buttons.BUTTON_RX_VIDEO_CALL;
 import static com.android.incallui.CallButtonFragment.Buttons.BUTTON_VO_VIDEO_CALL;
 import static com.android.incallui.CallButtonFragment.Buttons.BUTTON_ADD_PARTICIPANT;
-import static com.android.incallui.CallButtonFragment.Buttons.BUTTON_HIDE_ME;
 
 import android.annotation.NonNull;
 import android.content.Context;
@@ -213,8 +212,6 @@ public class CallButtonFragment
         mConsultativeTransferButton.setOnClickListener(this);
         mAddParticipantButton = (ImageButton) parent.findViewById(R.id.addParticipant);
         mAddParticipantButton.setOnClickListener(this);
-        mHideMeButton = (ImageButton) parent.findViewById(R.id.hideMe);
-        mHideMeButton.setOnClickListener(this);
         mOverflowButton = (ImageButton) parent.findViewById(R.id.overflowButton);
         mOverflowButton.setOnClickListener(this);
         mManageVideoCallConferenceButton = (ImageButton) parent.findViewById(
@@ -269,8 +266,6 @@ public class CallButtonFragment
             getPresenter().showDialpadClicked(!mShowDialpadButton.isSelected());
         } else if (id == R.id.addParticipant) {
             getPresenter().addParticipantClicked();
-        } else if (id == R.id.hideMe) {
-            getPresenter().hideMeClicked(!mHideMeButton.isSelected());
         } else if (id == R.id.changeToVideoButton) {
             getPresenter().changeToVideoClicked();
         } else if (id == R.id.changeToVoiceButton) {
@@ -356,7 +351,6 @@ public class CallButtonFragment
                 mChangeToVoiceButton,
                 mAddCallButton,
                 mMergeButton,
-                mHideMeButton,
                 mBlindTransferButton,
                 mAssuredTransferButton,
                 mConsultativeTransferButton,
@@ -519,8 +513,6 @@ public class CallButtonFragment
             return mRxVideoCallButton;
         } else if (id == BUTTON_VO_VIDEO_CALL) {
             return mVoVideoCallButton;
-        } else if (id == BUTTON_HIDE_ME) {
-            return mHideMeButton;
         } else {
             Log.w(this, "Invalid button id");
             return null;
